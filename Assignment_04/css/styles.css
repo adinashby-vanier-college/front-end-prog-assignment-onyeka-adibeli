@@ -1,0 +1,145 @@
+/* Color Variables */
+:root {
+    --primary-color: #ee8866;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.9);
+    --text-muted: rgba(255, 255, 255, 0.5);
+    --spacing-sm: 200px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+    --font-size-normal: 1.2rem;
+    --font-size-large: 2.5rem;
+    --font-size-mobile: 1.8rem;
+}
+
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    max-width: 1800px;
+    padding: var(--spacing-md);
+    position: relative;
+}
+
+/* Quote styling */
+.quote {
+    font-size: var(--font-size-large);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+.profile {
+    position: absolute;
+    top: 180px;         /* adjust as needed */
+    left: 0;
+    right: 0;
+    margin: calc(var(--spacing-md)) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: (--spacing-sm);
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: var(--font-size-normal);
+    color: var(--text-secondary);
+}
+
+/* Navigation buttons */
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+    color: var(--text-primary);
+}
+
+/* Logo section */
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-top: calc(var(--spacing-md));
+    flex-wrap: wrap;
+    padding: var(--spacing-md);
+}
+
+/* Individual logo styles */
+.logo {
+    height: 30px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* Brand-specific styles */
+.logo-techcrunch {
+    filter: none;  /* TechCrunch green */
+    color: #00A562;
+}
+
+.logo-tnw {
+    filter: none;  /* TNW red */
+    color: #ff3c1f;
+}
+
+.logo-business-insider {
+    filter: none;  /* Business Insider blue */
+    color: #2668E2;
+}
+
+.logo-mashable {
+    filter: none;  /* Mashable blue */
+    color: #00AFF0;
+}
+
+/* Responsive logos */
+@media (max-width: 768px) {
+    .logos {
+        gap: var(--spacing-md);
+    }
+    
+    .logo {
+        height: 20px;
+    }
+}
